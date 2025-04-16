@@ -2,7 +2,7 @@
   "name": "reactbrox",
   "displayName": "ReactBroX",
   "description": "Analyzer for React components, hooks, state, and context in NX projects",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "dhgo",
   "repository": {
     "type": "git",
