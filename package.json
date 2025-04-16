@@ -1,0 +1,120 @@
+{
+  "name": "reactbrox",
+  "displayName": "ReactBroX",
+  "description": "Analyzer for React components, hooks, state, and context in NX projects",
+  "version": "1.0.3",
+  "publisher": "dhgo",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Visualization"
+  ],
+  "keywords": [
+    "react",
+    "nx",
+    "component",
+    "hooks",
+    "analyzer"
+  ],
+  "icon": "media/reactbro.png",
+  "galleryBanner": {
+    "color": "#61DAFB",
+    "theme": "light"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ReactBroX.helloWorld",
+        "title": "ReactBroX: Hello World"
+      },
+      {
+        "command": "ReactBroX.detectNxProject",
+        "title": "ReactBroX: Detect NX Project"
+      },
+      {
+        "command": "ReactBroX.analyzeComponents",
+        "title": "ReactBroX: Analyze React Components"
+      },
+      {
+        "command": "ReactBroX.startComponentServer",
+        "title": "ReactBroX: Start Component Server"
+      },
+      {
+        "command": "ReactBroX.stopComponentServer",
+        "title": "ReactBroX: Stop Component Server"
+      },
+      {
+        "command": "ReactBroX.exportToHtml",
+        "title": "ReactBroX: Export to HTML"
+      },
+      {
+        "command": "ReactBroX.exportToJson",
+        "title": "ReactBroX: Export to JSON"
+      },
+      {
+        "command": "ReactBroX.exportToMarkdown",
+        "title": "ReactBroX: Export to Markdown"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "reactBro",
+          "title": "ReactBroX",
+          "icon": "media/reactbro.svg"
+        }
+      ]
+    },
+    "views": {
+      "reactBro": [
+        {
+          "type": "webview",
+          "id": "reactBro.componentDetails",
+          "name": "Component Analysis"
+        },
+        {
+          "type": "webview",
+          "id": "reactBro.dependencyGraph",
+          "name": "NX Dependency Graph"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@nrwl/workspace": "^19.8.4",
+    "@types/babel__traverse": "^7.20.7",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/react": "^19.1.2",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.23.0",
+    "react-docgen-typescript": "^2.2.2",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "vis-network": "^9.1.9",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
