@@ -4,6 +4,10 @@
   "description": "Analyzer for React components, hooks, state, and context in NX projects",
   "version": "1.0.3",
   "publisher": "dhgo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhgoGit/ReactBroX.git"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
